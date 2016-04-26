@@ -7,25 +7,14 @@ import Darwin
 
 public func Ngram(_ content: String, type: NgramType = .Bigram) -> [String] {
     var container: [String] = []
-    let width: Int
+    let width: Int = type.rawValue
 
-    switch type {
-    case .Unigram:
-        width = 1
-        break
-    case .Bigram:
-        width = 2
-        break
-    case .Trigram:
-        width = 3
-        break
-    }
-
-    for i in 0...content.characters.count-1 {
+    for i in 0..<content.characters.count {
         if i > (width - 2) {
-            var ng = ""
+            var ng  = ""
+            var j   = width - 1
 
-            for var j = (width - 1); j >= 0; j -= 1 {
+            while j >= 0 {
                 #if swift(>=3)
                 let index = content.startIndex.advanced(by: i - j)
                 #else
@@ -33,6 +22,8 @@ public func Ngram(_ content: String, type: NgramType = .Bigram) -> [String] {
                 #endif
 
                 ng.append(content[index])
+
+                j -= 1
             }
 
             container.append(ng)
