@@ -1,5 +1,9 @@
 
-build:
+lint:
+	@swiftlint
+
+build: lint
+	@echo "Build..."
 	@swift build
 
 test: build
@@ -7,3 +11,7 @@ test: build
 
 clean:
 	@swift build --clean
+
+travis:
+	@swift build
+	@swift test
