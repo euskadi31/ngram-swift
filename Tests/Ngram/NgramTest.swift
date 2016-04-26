@@ -47,17 +47,14 @@ class NgramTest: XCTestCase {
     }*/
 }
 
-#if os(Linux)
+/*#if os(Linux)
 extension NgramTest: XCTestCaseProvider {
     var allTests: [(String, () throws -> Void)] {
         return [
             ("testUnigram", testUnigram),
             ("testBigram", testBigram),
-            ("testTrigram", testTrigram)/*,
-            ("testUnigramPerformance", testUnigramPerformance),
-            ("testBigramPerformance", testBigramPerformance),
-            ("testTrigramPerformance", testTrigramPerformance),*/
+            ("testTrigram", testTrigram)
         ]
     }
 }
-#endif
+#endif*/
