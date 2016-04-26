@@ -1,3 +1,14 @@
+//===----------------------------------------------------------------------===//
+//
+// This source file is part of the Ngram open source project
+//
+// Copyright (c) 2016 Axel Etcheverry.
+// Licensed under MIT
+//
+// See LICENSE.md for license information
+// See CONTRIBUTORS.txt for the list of ngram project authors
+//
+//===----------------------------------------------------------------------===//
 
 #if os(Linux)
 import Glibc
@@ -5,7 +16,9 @@ import Glibc
 import Darwin
 #endif
 
-public func Ngram(_ content: String, type: NgramType = .Bigram) -> [String] {
+@warn_unused_result
+public // @testable
+func Ngram(_ content: String, type: NgramType = .Bigram) -> [String] {
     var container: [String] = []
     let width: Int = type.rawValue
 

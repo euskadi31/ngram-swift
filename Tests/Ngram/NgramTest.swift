@@ -1,3 +1,14 @@
+//===----------------------------------------------------------------------===//
+//
+// This source file is part of the Ngram open source project
+//
+// Copyright (c) 2016 Axel Etcheverry.
+// Licensed under MIT
+//
+// See LICENSE.md for license information
+// See CONTRIBUTORS.txt for the list of ngram project authors
+//
+//===----------------------------------------------------------------------===//
 
 import XCTest
 @testable import Ngram
@@ -38,12 +49,12 @@ class NgramTest: XCTestCase {
 
 #if os(Linux)
 extension NgramTest: XCTestCaseProvider {
-    var allTests : [(String, () throws -> Void)] {
+    var allTests: [(String, () throws -> Void)] {
         return [
             ("testUnigram", testUnigram),
             ("testBigram", testBigram),
-            ("testTrigram", testTrigram),
-            /*("testUnigramPerformance", testUnigramPerformance),
+            ("testTrigram", testTrigram)/*,
+            ("testUnigramPerformance", testUnigramPerformance),
             ("testBigramPerformance", testBigramPerformance),
             ("testTrigramPerformance", testTrigramPerformance),*/
         ]
