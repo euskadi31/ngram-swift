@@ -12,8 +12,8 @@
 
 import XCTest
 
-@testable import NgramTest
+@testable import NgramTestSuite
 
 XCTMain([
-    NgramTest(),
+    testCase(NgramTest.allTests),
 ])

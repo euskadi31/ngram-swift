@@ -15,6 +15,17 @@ import XCTest
 
 class NgramTest: XCTestCase {
 
+    static var allTests: [(String, NgramTest -> () throws -> Void)] {
+        return [
+            ("testUnigram", testUnigram),
+            ("testBigram", testBigram),
+            ("testTrigram", testTrigram),
+            ("testPerformanceUnigram", testPerformanceUnigram),
+            ("testPerformanceBigram", testPerformanceBigram),
+            ("testPerformanceTrigram", testPerformanceTrigram)
+        ]
+    }
+
     func testUnigram() {
         XCTAssertEqual(ngram("Hello", type: .Unigram), ["H", "e", "l", "l", "o"])
     }
