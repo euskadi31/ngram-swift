@@ -1,5 +1,7 @@
 language: generic
 matrix:
+  allow_failures:
+    - os: linux
   include:
     - os: linux
       services: docker
