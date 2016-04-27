@@ -40,7 +40,7 @@ class NgramTest: XCTestCase {
     }
 
     func testPerformanceUnigram() {
-        #if swift(>=3)
+        #if swift(>=3) && !os(Linux)
             self.measure {
                 _ = ngram("Hello", type: .Unigram)
             }
@@ -52,7 +52,7 @@ class NgramTest: XCTestCase {
     }
 
     func testPerformanceBigram() {
-        #if swift(>=3)
+        #if swift(>=3) && !os(Linux)
             self.measure {
                 _ = ngram("Hello", type: .Bigram)
             }
@@ -64,7 +64,7 @@ class NgramTest: XCTestCase {
     }
 
     func testPerformanceTrigram() {
-        #if swift(>=3)
+        #if swift(>=3) && !os(Linux)
             self.measure {
                 _ = ngram("Hello", type: .Trigram)
             }
@@ -75,15 +75,3 @@ class NgramTest: XCTestCase {
         #endif
     }
 }
-
-/*#if os(Linux)
-extension NgramTest: XCTestCaseProvider {
-    var allTests: [(String, () throws -> Void)] {
-        return [
-            ("testUnigram", testUnigram),
-            ("testBigram", testBigram),
-            ("testTrigram", testTrigram)
-        ]
-    }
-}
-#endif*/
