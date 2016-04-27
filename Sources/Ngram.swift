@@ -16,9 +16,15 @@ import Glibc
 import Darwin
 #endif
 
+/// n-Gram analysis is a field in textual analysis which uses sliding window character
+/// sequences in order to aid topic analysis.
+///
+/// - Parameter content: The text for n-Gram analysis
+/// - Parameter type: The type of n-Gram (Unigram, Bigram or Trigram)
+/// - returns: A array of n-Gram token
 @warn_unused_result
 public // @testable
-func Ngram(_ content: String, type: NgramType = .Bigram) -> [String] {
+func ngram(_ content: String, type: NgramType = .Bigram) -> [String] {
     var container: [String] = []
     let width: Int = type.rawValue
 
@@ -45,41 +51,3 @@ func Ngram(_ content: String, type: NgramType = .Bigram) -> [String] {
 
     return container
 }
-
-/*
-public class Ngram {
-    var container: [String]
-
-    init(_ content: String, type: NgramType = .Bigram) {
-        self.container = []
-
-        let width: Int
-
-        switch type {
-        case .Unigram:
-            width = 1
-            break
-        case .Bigram:
-            width = 2
-            break
-        case .Trigram:
-            width = 3
-            break
-        }
-
-        for i in 0...content.characters.count-1 {
-            if i > (width - 2) {
-                var ng = ""
-
-                for var j = (width - 1); j >= 0; j -= 1 {
-                    ng.append(content[content.startIndex.advanced(by: i - j)])
-                }
-
-                self.container.append(ng)
-            }
-        }
-
-        print(container)
-    }
-}
-*/

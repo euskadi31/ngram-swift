@@ -16,35 +16,53 @@ import XCTest
 class NgramTest: XCTestCase {
 
     func testUnigram() {
-        XCTAssertEqual(Ngram("Hello", type: .Unigram), ["H", "e", "l", "l", "o"])
+        XCTAssertEqual(ngram("Hello", type: .Unigram), ["H", "e", "l", "l", "o"])
     }
 
     func testBigram() {
-        XCTAssertEqual(Ngram("Hello", type: .Bigram), ["He", "el", "ll", "lo"])
-        XCTAssertEqual(Ngram("Hello"), ["He", "el", "ll", "lo"])
+        XCTAssertEqual(ngram("Hello", type: .Bigram), ["He", "el", "ll", "lo"])
+        XCTAssertEqual(ngram("Hello"), ["He", "el", "ll", "lo"])
     }
 
     func testTrigram() {
-        XCTAssertEqual(Ngram("Hello", type: .Trigram), ["Hel", "ell", "llo"])
+        XCTAssertEqual(ngram("Hello", type: .Trigram), ["Hel", "ell", "llo"])
     }
 
-    /*func testUnigramPerformance() {
-        self.measureBlock {
-            let arr = Ngram("Hello", type: .Unigram)
-        }
+    func testPerformanceUnigram() {
+        #if swift(>=3)
+            self.measure {
+                _ = ngram("Hello", type: .Unigram)
+            }
+        #else
+            self.measureBlock {
+            _ = ngram("Hello", type: .Unigram)
+            }
+        #endif
     }
 
-    func testBigramPerformance() {
-        self.measureBlock {
-            let arr = Ngram("Hello", type: .Bigram)
-        }
+    func testPerformanceBigram() {
+        #if swift(>=3)
+            self.measure {
+                _ = ngram("Hello", type: .Bigram)
+            }
+        #else
+            self.measureBlock {
+                _ = ngram("Hello", type: .Bigram)
+            }
+        #endif
     }
 
-    func testTrigramPerformance() {
-        self.measureBlock {
-            let arr = Ngram("Hello", type: .Trigram)
-        }
-    }*/
+    func testPerformanceTrigram() {
+        #if swift(>=3)
+            self.measure {
+                _ = ngram("Hello", type: .Trigram)
+            }
+        #else
+            self.measureBlock {
+            _ = ngram("Hello", type: .Trigram)
+            }
+        #endif
+    }
 }
 
 /*#if os(Linux)

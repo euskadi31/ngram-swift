@@ -1,0 +1,326 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		_LinkFileRef_Ngram /* libNgram.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_Ngram" /* libNgram.dylib */; };
+		__src_cc_ref_Sources/Ngram.swift /* Ngram.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/Ngram.swift /* Ngram.swift */; };
+		__src_cc_ref_Sources/Type.swift /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/Type.swift /* Type.swift */; };
+		__src_cc_ref_Tests/Ngram/NgramTest.swift /* NgramTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Tests/Ngram/NgramTest.swift /* NgramTest.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3CD088FA1CD17D1600C5E6F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = __RootObject_ /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "______Target_Ngram";
+			remoteInfo = Ngram;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		__PBXFileRef_Package.swift /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = /Users/euskadi31/Projects/Github/Dacteev/ngram/Package.swift; sourceTree = "<group>"; };
+		__PBXFileRef_Sources/Ngram.swift /* Ngram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ngram.swift; sourceTree = "<group>"; };
+		__PBXFileRef_Sources/Type.swift /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
+		__PBXFileRef_Tests/Ngram/NgramTest.swift /* NgramTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NgramTest.swift; sourceTree = "<group>"; };
+		"_____Product_Ngram" /* libNgram.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libNgram.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		"_____Product_NgramTestSuite" /* Ngram.testsuite.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = Ngram.testsuite.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		"___LinkPhase_Ngram" /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		"___LinkPhase_NgramTestSuite" /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				_LinkFileRef_Ngram /* libNgram.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		Dependencies_ /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		TestProducts_ /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				"_____Product_NgramTestSuite" /* Ngram.testsuite.xctest */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		"___RootGroup_" = {
+			isa = PBXGroup;
+			children = (
+				__PBXFileRef_Package.swift /* Package.swift */,
+				"_____Sources_" /* Sources */,
+				Dependencies_ /* Dependencies */,
+				"_______Tests_" /* Tests */,
+				"____Products_" /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		"____Products_" /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				TestProducts_ /* Tests */,
+				"_____Product_Ngram" /* libNgram.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		"_____Sources_" /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				"_______Group_Ngram" /* Ngram */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		"_______Group_Ngram" /* Ngram */ = {
+			isa = PBXGroup;
+			children = (
+				__PBXFileRef_Sources/Ngram.swift /* Ngram.swift */,
+				__PBXFileRef_Sources/Type.swift /* Type.swift */,
+			);
+			name = Ngram;
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		"_______Group_NgramTestSuite" /* Ngram.testsuite */ = {
+			isa = PBXGroup;
+			children = (
+				__PBXFileRef_Tests/Ngram/NgramTest.swift /* NgramTest.swift */,
+			);
+			name = Ngram.testsuite;
+			path = Tests/Ngram;
+			sourceTree = "<group>";
+		};
+		"_______Tests_" /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				"_______Group_NgramTestSuite" /* Ngram.testsuite */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"______Target_Ngram" /* Ngram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = "_______Confs_Ngram" /* Build configuration list for PBXNativeTarget "Ngram" */;
+			buildPhases = (
+				CompilePhase_Ngram /* Sources */,
+				"___LinkPhase_Ngram" /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ngram;
+			productName = Ngram;
+			productReference = "_____Product_Ngram" /* libNgram.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		"______Target_NgramTestSuite" /* Ngram.testsuite */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = "_______Confs_NgramTestSuite" /* Build configuration list for PBXNativeTarget "Ngram.testsuite" */;
+			buildPhases = (
+				CompilePhase_NgramTestSuite /* Sources */,
+				"___LinkPhase_NgramTestSuite" /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				__Dependency_Ngram /* PBXTargetDependency */,
+			);
+			name = Ngram.testsuite;
+			productName = NgramTestSuite;
+			productReference = "_____Product_NgramTestSuite" /* Ngram.testsuite.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		__RootObject_ /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = "___RootConfs_" /* Build configuration list for PBXProject "Ngram" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = "___RootGroup_";
+			productRefGroup = "____Products_" /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"______Target_Ngram" /* Ngram */,
+				"______Target_NgramTestSuite" /* Ngram.testsuite */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CompilePhase_Ngram /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				__src_cc_ref_Sources/Ngram.swift /* Ngram.swift in Sources */,
+				__src_cc_ref_Sources/Type.swift /* Type.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CompilePhase_NgramTestSuite /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				__src_cc_ref_Tests/Ngram/NgramTest.swift /* NgramTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		__Dependency_Ngram /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "______Target_Ngram" /* Ngram */;
+			targetProxy = 3CD088FA1CD17D1600C5E6F6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		_ReleaseConf_Ngram /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_INSTALL_NAME_BASE = "$(CONFIGURATION_BUILD_DIR)";
+				ENABLE_TESTABILITY = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_MODULE_NAME = Ngram;
+				PRODUCT_NAME = "lib$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		_ReleaseConf_NgramTestSuite /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_MODULE_NAME = NgramTestSuite;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		"___DebugConf_Ngram" /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_INSTALL_NAME_BASE = "$(CONFIGURATION_BUILD_DIR)";
+				ENABLE_TESTABILITY = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_MODULE_NAME = Ngram;
+				PRODUCT_NAME = "lib$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		"___DebugConf_NgramTestSuite" /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_MODULE_NAME = NgramTestSuite;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		"_____Release_" /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
+			};
+			name = Release;
+		};
+		"_______Debug_" /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		"___RootConfs_" /* Build configuration list for PBXProject "Ngram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"_______Debug_" /* Debug */,
+				"_____Release_" /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		"_______Confs_Ngram" /* Build configuration list for PBXNativeTarget "Ngram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"___DebugConf_Ngram" /* Debug */,
+				_ReleaseConf_Ngram /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		"_______Confs_NgramTestSuite" /* Build configuration list for PBXNativeTarget "Ngram.testsuite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"___DebugConf_NgramTestSuite" /* Debug */,
+				_ReleaseConf_NgramTestSuite /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = __RootObject_ /* Project object */;
+}
