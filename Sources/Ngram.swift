@@ -1,3 +1,14 @@
+//===----------------------------------------------------------------------===//
+//
+// This source file is part of the Ngram open source project
+//
+// Copyright (c) 2016 Axel Etcheverry.
+// Licensed under MIT
+//
+// See LICENSE.md for license information
+// See CONTRIBUTORS.txt for the list of ngram project authors
+//
+//===----------------------------------------------------------------------===//
 
 #if os(Linux)
 import Glibc
@@ -5,27 +16,24 @@ import Glibc
 import Darwin
 #endif
 
-public func Ngram(_ content: String, type: NgramType = .Bigram) -> [String] {
+/// n-Gram analysis is a field in textual analysis which uses sliding window character
+/// sequences in order to aid topic analysis.
+///
+/// - Parameter content: The text for n-Gram analysis
+/// - Parameter type: The type of n-Gram (Unigram, Bigram or Trigram)
+/// - returns: A array of n-Gram token
+@warn_unused_result
+public // @testable
+func ngram(_ content: String, type: NgramType = .Bigram) -> [String] {
     var container: [String] = []
-    let width: Int
+    let width: Int = type.rawValue
 
-    switch type {
-    case .Unigram:
-        width = 1
-        break
-    case .Bigram:
-        width = 2
-        break
-    case .Trigram:
-        width = 3
-        break
-    }
-
-    for i in 0...content.characters.count-1 {
+    for i in 0..<content.characters.count {
         if i > (width - 2) {
-            var ng = ""
+            var ng  = ""
+            var j   = width - 1
 
-            for var j = (width - 1); j >= 0; j -= 1 {
+            while j >= 0 {
                 #if swift(>=3)
                 let index = content.startIndex.advanced(by: i - j)
                 #else
@@ -33,6 +41,8 @@ public func Ngram(_ content: String, type: NgramType = .Bigram) -> [String] {
                 #endif
 
                 ng.append(content[index])
+
+                j -= 1
             }
 
             container.append(ng)
@@ -41,41 +51,3 @@ public func Ngram(_ content: String, type: NgramType = .Bigram) -> [String] {
 
     return container
 }
-
-/*
-public class Ngram {
-    var container: [String]
-
-    init(_ content: String, type: NgramType = .Bigram) {
-        self.container = []
-
-        let width: Int
-
-        switch type {
-        case .Unigram:
-            width = 1
-            break
-        case .Bigram:
-            width = 2
-            break
-        case .Trigram:
-            width = 3
-            break
-        }
-
-        for i in 0...content.characters.count-1 {
-            if i > (width - 2) {
-                var ng = ""
-
-                for var j = (width - 1); j >= 0; j -= 1 {
-                    ng.append(content[content.startIndex.advanced(by: i - j)])
-                }
-
-                self.container.append(ng)
-            }
-        }
-
-        print(container)
-    }
-}
-*/
