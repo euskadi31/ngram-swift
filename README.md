@@ -9,8 +9,16 @@ Ngram swift
 
 > an **_n_-gram** is a contiguous sequence of _n_ items from a given sequence of text or speech.
 
+
 ~~~swift
+Import Ngram
+
 let arr = ngram("Hello")
 
 print(arr) // ["He", "el", "ll", "lo"]
 ~~~
+
+
+## License
+
+ngram-swift is licensed under [the MIT license](LICENSE.md).
