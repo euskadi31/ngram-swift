@@ -11,7 +11,7 @@ Ngram swift
 
 
 ~~~swift
-Import Ngram
+import Ngram
 
 let arr = ngram("Hello")
 
